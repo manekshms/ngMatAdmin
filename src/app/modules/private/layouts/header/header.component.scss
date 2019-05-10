@@ -1,0 +1,19 @@
+.main-header {
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0,.125);
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &__right-menu{
+        margin: 0px;
+        margin-left: auto;
+        list-style: none;
+    }
+
+    &__logo {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        color: #0849ff;
+    }
+}

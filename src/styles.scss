@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/*
+-------------------------------------------------------------
+COLORS
+$color-blue-dark: #3c88fc;
+#0849ff
+$color-blue: #34a2f6;
+
+$color-red: #f94b34;
+$color-red-dark: #f9416c;
+
+$color-black: #0f2139;
+$color-grey: #90939a;
+$color-grey-dark: #666;
+
+$color-yellow: #edcd38;
+$color-yellow-light: #fef7d3;
+
+$color-green-dark: #2cac6b;
+$color-green-light: #3ce179;
+-------------------------------------------------------------
+*/
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:Roboto,"Helvetica Neue",sans-serif
+}
+
+mat-progress-bar.color-blue .mat-progress-bar-fill::after{
+    background-color: #0849ff;
+}
+
+mat-progress-bar.color-blue .mat-progress-bar-buffer{
+    background: #e5ecff;
+}

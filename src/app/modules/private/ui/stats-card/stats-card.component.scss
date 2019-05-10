@@ -1,0 +1,37 @@
+
+.stats-card {
+    padding: 10px;
+    box-shadow: 0px 2px 10px rgba(#000, .1);
+    border-radius: 3px;
+    background-color: #fff;
+    width: 100%;
+
+
+    &__title {
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+        color: rgba(17, 17, 17, 0.8);
+    }
+
+    &__data {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    &__icon {
+        /*background: linear-gradient(to right, #3c88fc,  #34a2f6);*/
+        background: linear-gradient( to right, #0849ff 50%, rgba(#0849ff, 0.6));
+        background: rgba(#0849ff, 0.1);
+        border-radius: 5px;
+        mat-icon {
+            font-size: 70px;
+            color: #fff;
+            color: rgba(#0849ff, .8);
+            height: 70px;;
+            width: 70px;
+        }
+    }
+
+}

@@ -1,0 +1,165 @@
+<mat-toolbar>Dashboard</mat-toolbar>
+
+<section class="last-login-info">
+    <app-ui-message-card 
+    title="Welcome back John Doe..." 
+    message="Your last login date   27th Januvary 2019...">
+    </app-ui-message-card>
+</section>
+
+<section class="stats-container">
+    <div fxLayout="row wrap" fxLayoutAlign.lt-lg="space-around" fxLayoutAlign="space-between" class="stats-list">
+        <app-ui-stats-card title="Total Users" value="12539" icon="perm_identity_stroked"></app-ui-stats-card>
+        <app-ui-stats-card title="Open Ticket" value="200" icon="open_in_new_stroked"></app-ui-stats-card>
+        <app-ui-stats-card title="Calls" value="800" icon="phone_in_talk_stroked"></app-ui-stats-card>
+        <app-ui-stats-card title="Earnings" value="$12539" icon="attach_money_stroked"></app-ui-stats-card>
+    </div>
+</section>
+
+<section class="user-section" fxLayout fxLayout.lt-lg="column" fxLayoutGap="20px">
+    <div class="user-profile-container"  fxFlex="1 1 50%">
+        <app-ui-card>
+            <app-ui-card-header>
+                <div class="user-profile" fxLayout fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutAlign.lt-sm="center center" fxLayoutAlign="stretch center">
+                    <img class="user-profile__photo" src="assets/user.jpg" alt="">
+                    <div class="user-profile__name">
+                        <h3 class="user-profile__title">John Doe</h3>
+                        <p class="user-profile__meta">Software Developer</p>
+                    </div>
+                    <div class="user-profile__link " fxFlex="100px" fxFlex.lt-sm="50px">
+                            <app-btn-blue [btnLarge]="true" [btnShadow]="true" [fullLengthBtn]="true">Edit</app-btn-blue>
+                    </div>
+                </div>
+            </app-ui-card-header>
+            <app-ui-card-body>
+                <div class="user-profile-details"  fxLayoutWrap fxLayout="column">
+                    <div class="user-profile-details__items user-profile-details__urgent" >
+                        <p class="user-profile-details__paragraph">Identify resources to be monitored.</p>
+                    </div>
+                    <div class="user-profile-details__items"  >
+                        <p class="user-profile-details__paragraph">Identify tasks and URLs by resource type.</p>
+                    </div>
+                    <div class="user-profile-details__items user-profile-details__urgent"  >
+                        <p class="user-profile-details__paragraph">Install test and QA servers and prerequisite software.</p>
+                    </div>
+                    <div class="user-profile-details__items"  >
+                        <p class="user-profile-details__paragraph">Install production servers and prerequisite software.</p>
+                    </div>
+                </div>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+    <div class="new-user" fxFlex="1 1 50%">
+        <app-ui-card>
+            <app-ui-card-header>
+                <app-ui-card-header-title>New Users</app-ui-card-header-title>
+            </app-ui-card-header>
+            <app-ui-card-body>
+                    <table  mat-table [dataSource]="dataSource" class="new-user-table mat-elevation-z8">
+                        <!--- Note that these columns can be defined in any order.
+                                The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="position">
+                            <th mat-header-cell *matHeaderCellDef> No. </th>
+                            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="location">
+                            <th mat-header-cell *matHeaderCellDef> Location </th>
+                            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+                        </ng-container>
+
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="age">
+                            <th mat-header-cell *matHeaderCellDef> Age </th>
+                            <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+
+</section>
+
+<section class="section-charts" fxLayout fxLayoutGap="20px" fxLayout.lt-lg="column" fxLayoutAlign="start stretch">
+    <div class="bar-chart" fxFlex="0 0 70%" >
+        <app-ui-card>
+            <app-ui-card-header>
+                <app-ui-card-header-title>Bar Chart</app-ui-card-header-title>
+            </app-ui-card-header>
+            <app-ui-card-body style="overflow: hidden; max-width: 100%; width: 100%;">
+                <div style=" width: 98%; overflow: hidden; position: relative;">
+                <canvas baseChart
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+                </canvas>
+                </div>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+    <div class="pie-chart" fxFlex="0 0 30%" >
+        <app-ui-card>
+            <app-ui-card-header>
+                <app-ui-card-header-title>Perfomance</app-ui-card-header-title>
+            </app-ui-card-header>
+            <app-ui-card-body>
+                <ul class="perfomance-report">
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Total Task <span class="perfomance-report__title-value">40%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="40"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Total time log <span class="perfomance-report__title-value">25%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="25"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Upcomming task <span class="perfomance-report__title-value">80%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="80"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Call <span class="perfomance-report__title-value">75%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="75"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Email sent <span class="perfomance-report__title-value">40%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="40"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Email received <span class="perfomance-report__title-value">84%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="84"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Task completed<span class="perfomance-report__title-value">44%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="44"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Issues reported<span class="perfomance-report__title-value">82%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="82"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Overtime hours <span class="perfomance-report__title-value">37%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="37"></mat-progress-bar>
+                    </li>
+                    <li class="perfomance-report__item">
+                        <h4 class="perfomance-report__title">Overall perfomance<span class="perfomance-report__title-value">79%</span></h4>
+                        <mat-progress-bar class="perfomance-report__progress-bar color-blue" mode="determinate" value="79"></mat-progress-bar>
+                    </li>
+                </ul>
+            </app-ui-card-body>
+        </app-ui-card>
+    </div>
+</section>

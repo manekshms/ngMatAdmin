@@ -1,0 +1,12 @@
+    <div fxLayout fxLayoutAlign="start center" class="message-card" >
+        <div class="message-card__content" fxLayoutGap="20px" fxLayout fxLayoutAlign="start center">
+            <div class="message-card__icon" fxFlex="90px"><mat-icon>{{icon}}</mat-icon></div>
+            <div>
+                <p><strong>{{title}}</strong> </p>
+                <p>{{message}}</p>
+            </div>
+        </div>
+        <div *ngIf="showButton" class="message-card__btn">
+            <app-btn-blue (click)="onButtonClick(event)">{{buttonText}}</app-btn-blue>
+        </div>
+    </div>
