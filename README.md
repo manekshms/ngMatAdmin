@@ -3,6 +3,9 @@ Angular Material admin dashboard
 
 [Demo](http://manekshms.com/ngMatAdmin)
 
+## Installation
+
+Run `$npm install`
 
 ## Development server
 
