@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
 const ELEMENT_DATA = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -18,6 +20,11 @@ const ELEMENT_DATA = [
     styleUrls: ['./tables.component.scss'],
 })
 export class TablesComponent {
+
     displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
     dataSource = ELEMENT_DATA;
+
+    public constructor(private titleService:Title) {
+      this.titleService.setTitle("Tables");
+    }
 }

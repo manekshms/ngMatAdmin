@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
@@ -22,7 +22,7 @@ import { UIService } from './core/services/ui.service';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule {
