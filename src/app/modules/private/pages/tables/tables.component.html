@@ -1,1 +1,75 @@
 <mat-toolbar>Tables</mat-toolbar>
+<section class="simple-table">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Simple Table</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef >Id</th>
+                    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+                <ng-container matColumnDef="firstName">
+                    <th mat-header-cell  *matHeaderCellDef >First Name</th>
+                    <td mat-cell *matCellDef="let element">{{element.firstName}}</td>
+                </ng-container>
+                <ng-container matColumnDef="lastName">
+                    <th mat-header-cell *matHeaderCellDef>Last Name</th>
+                    <td mat-cell *matCellDef="let element">{{element.lastName}}</td>
+                </ng-container>
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef>Email</th>
+                    <td mat-cell *matCellDef="let element"><a href="mailto:{{element.email}}" target="_top">{{element.email}}</a></td>
+                </ng-container>
+                <ng-container matColumnDef="gender">
+                    <th mat-header-cell *matHeaderCellDef>Gender</th>
+                    <td mat-cell *matCellDef="let element">{{element.gender}}</td>
+                </ng-container>
+                <ng-container matColumnDef="age">
+                    <th mat-header-cell *matHeaderCellDef>Age</th>
+                    <td mat-cell *matCellDef="let element">{{element.age}}</td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>
+<section class="advanced-table">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Advanced Table</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+            <table mat-table [dataSource]="dataSourceAdvancedTable">
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef>Id</th>
+                    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+                <ng-container matColumnDef="productName">
+                    <th mat-header-cell *matHeaderCellDef>Product</th>
+                    <td mat-cell *matCellDef="let element">{{element.productName}}</td>
+                </ng-container>
+                <ng-container matColumnDef="fullName">
+                    <th mat-header-cell *matHeaderCellDef>Full Name</th>
+                    <td mat-cell *matCellDef="let element">{{element.fullName}}</td>
+                </ng-container>
+                <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef>Address</th>
+                    <td mat-cell *matCellDef="let element">{{element.address}}</td>
+                </ng-container>
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef>Status</th>
+                    <td mat-cell *matCellDef="let element">{{element.status}}</td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsAdvanced" ></tr>
+                <tr mat-row *matRowDef="let row; columns:displayedColumnsAdvanced;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>
