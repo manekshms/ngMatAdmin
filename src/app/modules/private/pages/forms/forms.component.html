@@ -1,1 +1,116 @@
 <mat-toolbar>Forms</mat-toolbar>
+<section class="simple-form">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Simple Form</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="First Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Last Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Username">
+                </mat-form-field>
+            </div>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Age">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="City">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Zip/Postal Code">
+                </mat-form-field>
+            </div>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field>
+                    <input matInput type="email" placeholder="Email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Confirm Password">
+                </mat-form-field>
+            </div>
+            <div fxLayout>
+                <app-btn-blue [btnLarge]="true" [btnShadow]="true" [fullLengthBtn]="true">Submit</app-btn-blue>
+            </div>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>
+<section class="advanced-form">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Advanced Form</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" placeholder="Enter your first name">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" placeholder="Enter your last name">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput type="text" placeholder="Enter your username">
+                </mat-form-field>
+            </div>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input matInput type="text" placeholder="Enter your age">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <mat-select>
+                        <mat-option value="Us">United States</mat-option>
+                        <mat-option value="uk">England</mat-option>
+                        <mat-option value="ind">India</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Zip/Postal Code</mat-label>
+                    <input matInput type="text" placeholder="Enter your zip/postal code">
+                </mat-form-field>
+            </div>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" placeholder="Enter your email">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'">
+                    <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="Enter your password" [type]="hideConfirmPassword ? 'password' : 'text'">
+                    <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+            </div>
+            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput type="email" placeholder="Enter your phone">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="Enter your address"></textarea>
+                </mat-form-field>
+            </div>
+            <div fxLayout>
+                <app-btn-blue [btnLarge]="true" [btnShadow]="true" [fullLengthBtn]="true">Submit</app-btn-blue>
+            </div>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>

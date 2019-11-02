@@ -7,6 +7,8 @@ import { Title } from '@angular/platform-browser'
     styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent {
+    public hidePassword = true;
+    public hideConfirmPassword = true;
     public constructor(private titleService:Title) {
         this.titleService.setTitle("Forms");
     }

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 
 import { MatFormFieldModule, 
+         MatRadioModule,
          MatInputModule,
+         MatSelectModule,
          MatButtonModule,
          MatRippleModule,
          MatSidenavModule,
@@ -16,6 +18,8 @@ import { MatFormFieldModule,
 @NgModule({
     imports: [
         MatFormFieldModule,
+        MatRadioModule,
+        MatSelectModule,
         MatInputModule,
         MatButtonModule,
         MatRippleModule,
@@ -29,6 +33,8 @@ import { MatFormFieldModule,
     ],
     exports: [
         MatFormFieldModule,
+        MatRadioModule,
+        MatSelectModule,
         MatInputModule,
         MatButtonModule,
         MatRippleModule,
