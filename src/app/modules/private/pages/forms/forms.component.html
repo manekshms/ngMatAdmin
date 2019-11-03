@@ -5,7 +5,7 @@
             <app-ui-card-header-title>Simple Form</app-ui-card-header-title>
         </app-ui-card-header>
         <app-ui-card-body>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field>
                     <input matInput type="text" placeholder="First Name">
                 </mat-form-field>
@@ -16,7 +16,7 @@
                     <input matInput type="text" placeholder="Username">
                 </mat-form-field>
             </div>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field>
                     <input matInput type="text" placeholder="Age">
                 </mat-form-field>
@@ -27,7 +27,7 @@
                     <input matInput type="text" placeholder="Zip/Postal Code">
                 </mat-form-field>
             </div>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field>
                     <input matInput type="email" placeholder="Email">
                 </mat-form-field>
@@ -50,7 +50,7 @@
             <app-ui-card-header-title>Advanced Form</app-ui-card-header-title>
         </app-ui-card-header>
         <app-ui-card-body>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input matInput type="text" placeholder="Enter your first name">
@@ -64,7 +64,7 @@
                     <input matInput type="text" placeholder="Enter your username">
                 </mat-form-field>
             </div>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field appearance="outline">
                     <mat-label>Age</mat-label>
                     <input matInput type="text" placeholder="Enter your age">
@@ -82,7 +82,7 @@
                     <input matInput type="text" placeholder="Enter your zip/postal code">
                 </mat-form-field>
             </div>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
                     <input matInput type="email" placeholder="Enter your email">
@@ -98,7 +98,7 @@
                     <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </mat-form-field>
             </div>
-            <div fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxLayout fxLayoutGap="20px" fxLayout.lt-md="column" fxLayoutAlign="flex-start">
                 <mat-form-field appearance="outline">
                     <mat-label>Phone</mat-label>
                     <input matInput type="email" placeholder="Enter your phone">
