@@ -1,0 +1,14 @@
+.section-basic-buttons,
+.section-raised-buttons,
+.section-stroked-buttons,
+.section-flat-buttons,
+.section-fab-buttons,
+.section-mini-fab-buttons,
+.section-icon-buttons{
+    margin-top: 5px;
+    padding:10px 20px;
+
+    button {
+        margin-right: 10px;
+    }
+}
