@@ -10,7 +10,8 @@ const routes:Routes = [
             {path: "tables", loadChildren: './pages/tables/tables.module#TablesModule'},
             {path: "forms", loadChildren: './pages/forms/forms.module#FormsModule'},
             {path: 'buttons', loadChildren: './pages/buttons/buttons.module#ButtonsModule'},
-            {path: 'typography', loadChildren: './pages/typography/typography.module#TypographyModule'}
+            {path: 'typography', loadChildren: './pages/typography/typography.module#TypographyModule'},
+            {path: 'icons', loadChildren: './pages/icons/icons.module#IconsModule'}
         ]
     }
 ];

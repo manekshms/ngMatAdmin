@@ -1,0 +1,13 @@
+<mat-toolbar>Icons</mat-toolbar>
+<section class="icons-container-section">
+    <app-ui-card>
+        <app-ui-card-header>
+            <app-ui-card-header-title>Icons</app-ui-card-header-title>
+        </app-ui-card-header>
+        <app-ui-card-body>
+            <div fxLayout="row wrap" fxLayoutAlign="flex-start" class="icon-row">
+                <div *ngFor="let icon of icons " class="icon-column"><mat-icon >{{icon}}</mat-icon></div>
+            </div>
+        </app-ui-card-body>
+    </app-ui-card>
+</section>
